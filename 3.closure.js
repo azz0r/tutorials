@@ -4,20 +4,19 @@ var product = 'BT Broadband';
 function buyProduct() {
   console.log('Bought ' + product);
 }
-//buyProduct();
-/*
-Bought Broadband
-no argument passed but prodct var is set in the outside the function scope
-they are closures, without it we'd have to pass the product into the function
-paramaters.
-*/
+buyProduct();
+/*Output: "Bought BT Broadband"
+*No argument passed but product var is set in the outside the function scope
+*they are closures, without it we'd have to pass the product into the function
+*paramater.*/
 
-product = 'Virgin Broadband';
+product = 'EE Broadband';
 buyProduct();
 
 /*
-Nothing is copied, it is read from the outer scope
+Nothing is copied, it is still read from the outer scope
 heres a valid use case - can you think of where that might be useful?
+
 PRACTICAL:
 Write a function called createProduct that returns
 an object with an end date set outsite the function
